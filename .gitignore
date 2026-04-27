@@ -1,0 +1,51 @@
+# Compilados Java
+*.class
+
+# Logs
+*.log
+
+# Arquivos temporários
+*.tmp
+*.swp
+*.bak
+*.old
+
+# Diretórios de build
+/target/
+/out/
+/build/
+
+# Maven
+/.mvn/
+/mvnw
+/mvnw.cmd
+
+# Gradle
+.gradle/
+/build/
+
+# IntelliJ IDEA
+.idea/
+/*.iml
+*.iws
+*.ipr
+
+# Arquivos de sistema
+.DS_Store
+Thumbs.db
+
+# Configurações locais
+/local.properties
+
+# Arquivos de cache
+*.cache
+
+# Arquivos de cobertura de testes
+/coverage/
+
+# Arquivos gerados por ferramentas
+hs_err_pid*
+replay_pid*
+
+# Env (caso use variáveis locais)
+.env
