@@ -1,7 +1,7 @@
 package fundamentos.atividade01;
 
 public class Produto {
-    //Fundamentos: classes, atributos, métodos, construtor, this.
+    //Fundamentos: classes, atributos, métodos, construtor, this, sobrecarga.
 
     //Atributos
     private int id;
@@ -33,9 +33,11 @@ public class Produto {
         System.out.println("----------------------------");
     }
 
+    //Métodos
     public void adicionarEstoque (int quantidade) {
         if (quantidade <= 0) {
             System.out.println("Para adicionar ao estoque, o valor da quantidade não pode ser 0 ou menor");
+            return;
         }
         this.estoque += quantidade;
     }
@@ -43,10 +45,12 @@ public class Produto {
     public void removerEstoque(int quantidade) {
         if (quantidade <= 0) {
             System.out.println("Para remover do estoque, o valor da quantidade não pode ser 0 ou menor");
+            return;
         }
 
         if (quantidade > this.estoque) {
             System.out.println("Quantidade maior que o estoque, não é possivel fazer essa operação");
+            return;
         }
 
         this.estoque -= quantidade;
@@ -54,6 +58,36 @@ public class Produto {
 
     public double calcularValorTotalEstoque() {
         return preco * estoque;
+    }
+
+    //Sobrecarga
+    public void aplicarDesconto(double percentual) {
+        if (percentual < 0 || percentual > 100) {
+            System.out.println("Percentual inválido: " + percentual);
+            return;
+        }
+
+        double desconto = this.preco * (percentual / 100);
+        this.preco -= desconto;
+    }
+
+    public void aplicarDesconto(double percentual, boolean percentualEmDecimal) {
+        double valorPercentual;
+
+        if (percentualEmDecimal) {
+            if (percentual < 0 || percentual > 1) {
+                return;
+            }
+            valorPercentual = percentual;
+        } else {
+            if (percentual < 0 || percentual > 100) {
+                return;
+            }
+            valorPercentual = percentual / 100;
+        }
+
+        double desconto = this.preco * valorPercentual;
+        this.preco -= desconto;
     }
 
 }
