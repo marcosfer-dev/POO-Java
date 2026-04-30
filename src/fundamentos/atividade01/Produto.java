@@ -1,8 +1,6 @@
 package fundamentos.atividade01;
 
 public class Produto {
-    //Fundamentos: classes, atributos, métodos, construtor, this, sobrecarga.
-
     //Atributos
     private int id;
     private String nome;

@@ -2,6 +2,8 @@ package encapsulamento.atividade01;
 
 public class Main {
     public static void main(String[] args) {
+        //Encapsulamento
+
         // 1) Criação de contas
         ContaBancaria conta1 = new ContaBancaria("123", "Marcos");
         ContaBancaria conta2 = new ContaBancaria("456", "Ana");

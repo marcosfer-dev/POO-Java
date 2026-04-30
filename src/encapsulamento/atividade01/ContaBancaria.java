@@ -1,8 +1,6 @@
 package encapsulamento.atividade01;
 
 public class ContaBancaria {
-    //Encapsulamento
-
     private String numeroConta;
     private String titular;
     private double saldo;
